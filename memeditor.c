@@ -295,7 +295,7 @@ int ReplaceOpcodes(HANDLE hProcess, PVOID64 regionAddress, DWORD64 regionSize, c
     }
 
     // Restores the original memory protection of the region
-    //VirtualProtectEx(hProcess, regionAddress, regionSize, oldProtect, &newProtect);
+    VirtualProtectEx(hProcess, regionAddress, regionSize, oldProtect, &newProtect);
 
     return occurrences;
 }
