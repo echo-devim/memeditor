@@ -403,9 +403,7 @@ int main(int argc, char* argv[]) {
     // Resumes the process execution
     ResumeProcess(hProcess);
 
-
-    //ReadCodeSection(hProcess, codeAddress, codeSize);
-
+    // Detach from process
     if (DebugActiveProcessStop(processId)) {
         printf("Detached from process\n");
     } else {
